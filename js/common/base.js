@@ -26,8 +26,49 @@ class basejs {
 
         //Thực hiện lưu dữ liệu khi ấn button
         $(".btn-save").click(function() {
-            alert("Luu ");
-
+            //validate dữ liệu
+            var inputvalidates = $('.input-required , input[type="email"]');
+            $.each(inputvalidates, function(index, input) {
+                var value = $(input).val();
+                $(input).trigger('blur');
+            });
+            var isnotvalidate = $('input[validate="false"]');
+            if (isnotvalidate && isnotvalidate.length > 0) {
+                alert("Vui long dien day du thong tin");
+                isnotvalidate.focus();
+            } else {
+                alert("thanh cong");
+            }
+            //Thu thập thông tin được nhập --> build thành project
+            var customer = {
+                "CustomerCode": $('#txtCustomerCode').val(),
+                "FullName": $('#txtFullName').val(),
+                "Address": $('#txtAddress').val(),
+                "DateOfBirth": $('#dtDateOfBirth').val(),
+                "Email": $('#txtEmail').val(),
+                "PhoneNumer": $('#txtPhoneNumber').val(),
+                "GenderName": $('input[name="gioitinh"]:checked').val(),
+                "MemberCardCode": $('#txtMemberCardCode').val(),
+                "CustomerGroupName": $('#cbxCustomerGroupName').val(),
+                "CompanyName": $('#txtCompanyName').val(),
+                "CompanyTaxCode": $('#txtCompanyTaxCode').val()
+            }
+            console.log(customer);
+            // Gọi server tương ứng lưu dữ liệu
+            $.ajax({
+                type: "POST",
+                url: "http://api.manhnv.net/api/customers",
+                data: JSON.stringify(customer),
+                // contentType: "application/json",
+                dataType: "dataType"
+            }).done(function(res) {
+                debugger;
+            }).fail(function() {
+                debugger;
+            });
+            //Sau khi thành công thì đưa thông báo:
+            // ẩn form chi tiết
+            //  load lại dữ liệu
         });
 
         //Load lại dữ liệu
@@ -41,6 +82,41 @@ class basejs {
             $(".m-dialog").show();
         });
 
+        /**
+         * validate bắt bược nhập:
+         * Creater: VCCONG 26/03/2021
+         */
+        $('.input-required').blur(function() {
+            //js thuan
+            // this.classList.add("border-red");
+            //Kiểm tra dữ liệu nhập, nếu trống cảnh báo
+            var value = $(this).val();
+            if (value == "") {
+                $(this).addClass('border-red');
+                $(this).attr("title", 'Trường này không được trống');
+                $(this).attr("validate", "false");
+            } else {
+                $(this).removeClass('border-red');
+                $(this).attr("validate", "true");
+            }
+        })
+
+        /**
+         * validate kiểm tra nhập email đúng định dạng
+         * Creater: VCCONG 26/03/2021
+         */
+        $('input[type=email]').blur(function() {
+            var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;;
+            if (regex.test($(this).val()) == false) {
+                $(this).addClass('border-red');
+                $(this).attr("title", 'Email không đúng định dạng')
+                $(this).attr("validate", "false");
+            } else {
+                $(this).attr("title", '')
+                $(this).removeClass('border-red');
+                $(this).attr("validate", "true");
+            }
+        })
     }
 
     /**--------------------------------------

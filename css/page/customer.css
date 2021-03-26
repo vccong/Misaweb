@@ -1,0 +1,13 @@
+.grid-customer {
+    width: 100%;
+    height: calc(100vh - 229px);
+    overflow: scroll;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.text-align-center {
+    text-align: center;
+}

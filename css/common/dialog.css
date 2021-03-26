@@ -115,12 +115,16 @@
     margin-bottom: 4px;
 }
 
-.dialog-body-top .top-item .top-item-input input {
+.dialog-body .input-required {
     height: 40px;
     padding: 0%;
     padding-left: 15px;
     border: 1px solid #DBDEFF;
     border-radius: 5px;
+}
+
+.dialog-body-top .top-item .top-item-input input:focus {
+    border: 1px solid #2FBE8E;
 }
 
 .dialog-body-top .top-item .top-item-input select {
@@ -150,7 +154,7 @@
     display: inline-block;
 }
 
-.input {
+.input-required {
     width: calc(100% - 16px);
 }
 
@@ -180,12 +184,8 @@
     width: 264px;
 }
 
-.dialog-body-center .center-item .center-item-input input {
-    height: 40px;
-    padding: 0%;
-    padding-left: 15px;
-    border: 1px solid #DBDEFF;
-    border-radius: 5px;
+.dialog-body-center .center-item .center-item-input input:focus {
+    border: 1px solid #2FBE8E;
 }
 
 .dialog-body .dialog-body-bottom {
@@ -196,12 +196,8 @@
     margin-bottom: 4px;
 }
 
-.dialog-body-bottom .bottom-item .bottom-item-input input {
-    height: 40px;
-    padding: 0%;
-    padding-left: 15px;
-    border: 1px solid #DBDEFF;
-    border-radius: 5px;
+.dialog-body-bottom .bottom-item .bottom-item-input input:focus {
+    border: 1px solid #2FBE8E;
 }
 
 
@@ -221,4 +217,11 @@
     margin-top: 10px;
     margin-bottom: 10px;
     width: 100px;
+}
+
+
+/* chung */
+
+.input-required.border-red {
+    border: 1px solid #ff4747;
 }

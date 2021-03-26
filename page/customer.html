@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-
     <link rel="stylesheet" href="/css/common/header.css?v=1.1">
     <link rel="stylesheet" href="/css/common/main.css?v=1.1">
     <link rel="stylesheet" href="/css/common/navbar.css?v=1.1">
@@ -12,11 +11,11 @@
     <link rel="stylesheet" href="/css/common/icon.css?v=1.1">
     <link rel="stylesheet" href="/css/common/button.css?v=1.1">
     <link rel="stylesheet" href="/css/common/toolbar.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/dialog.css?v=1.1">
     <link rel="stylesheet" href="/css/common/input.css?v=1.1">
     <link rel="stylesheet" href="/css/common/grid.css?v=1.1">
-    <link rel="stylesheet" href="/css/common/dialog.css?v=1.1">
-    <link rel="stylesheet" href="/css/common/common.css">
-    <link rel="stylesheet" href="/css/page/employee.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/common.css?v=1.1">
+    <link rel="stylesheet" href="/css/page/customer.css?v=1.1">
     <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -92,7 +91,7 @@
                 </button>
             </div>
         </div>
-        <div class="grid grid-employee">
+        <div class="grid grid-customer">
             <table border="0" width="100%" cellspacing="0">
                 <thead>
                     <tr>
@@ -103,6 +102,9 @@
                         <th fieldName="DateOfBirth" formatType="ddmmyyyy">Ngày sinh</th>
                         <th fieldName="Email">Email</th>
                         <th fieldName="PhoneNumber">SĐT</th>
+                        <th fieldName="MemberCardCode">Mã thẻ thành viên</th>
+                        <th fieldName="CompanyName">Tên công ty</th>
+                        <th fieldName="CompanyTaxCode">Mã số thuế</th>
                         <th fieldName="CustomerGroupName">Xếp loại</th>
                     </tr>
                 </thead>
@@ -155,26 +157,27 @@
                     <div class="body-top-item2">
                         <div class="top-item ">
                             <div class="top-item-label ">Mã khách hàng(<span style="color:red">*</span>)</div>
-                            <div class="top-item-input"><input class="input" type="text"></div>
+                            <div class="top-item-input"><input id="txtCustomerCode" class="input-required" type="text"></div>
                         </div>
                         <div class="top-item ">
                             <div class="top-item-label ">Mã thẻ thành viên</div>
-                            <div class="top-item-input"><input class="input" type="text"></div>
+                            <div class="top-item-input"><input id="txtMemberCardCode" class="input-required" type="text">
+                            </div>
                         </div>
                         <div class="top-item ">
                             <div class="top-item-label ">Ngày sinh</div>
-                            <div class="top-item-input"><input class="input" type="date"></div>
+                            <div class="top-item-input"><input id="dtDateOfBirth" class="input-required" type="date"></div>
                         </div>
                     </div>
                     <div class="body-top-item3 ">
                         <div class="top-item ">
                             <div class="top-item-label">Họ và tên(<span style="color:red">*</span>)</div>
-                            <div class="top-item-input"><input class="input" type="text"></div>
+                            <div class="top-item-input"><input id="txtFullName" class="input-required" type="text"></div>
                         </div>
                         <div class="top-item ">
                             <div class="top-item-label ">Nhóm khách hàng</div>
                             <div class="top-item-input">
-                                <select name="" id="" class="input">
+                                <select name="" id="cbxCustomerGroupName" class="input">
                                 <option value="Khách vip">Khách vip</option>
                                 <option value="Khách thường">Khách thường</option>
                                 <option value="Khách của công ty">Khách của công ty</option>
@@ -183,10 +186,10 @@
                         </div>
                         <div class="top-item ">
                             <div class="top-item-label ">Giới tính</div>
-                            <div class="top-item-radio">
-                                <div><input name="gioitinh" type="radio">Nam</div>
-                                <div><input name="gioitinh" type="radio">Nữ</div>
-                                <div><input name="gioitinh" type="radio">Khác</div>
+                            <div class="top-item-radio" id="gender">
+                                <label><input name="gioitinh" type="radio" value="Nam">Nam</label>
+                                <label><input name="gioitinh" type="radio" value="Nữ">Nữ</label>
+                                <label><input name="gioitinh" type="radio" value="Không xác định">Khác</label>
                             </div>
                         </div>
                     </div>
@@ -195,30 +198,30 @@
                     <div class="body-center-item1">
                         <div class="center-item">
                             <div class="center-item-label ">Email</div>
-                            <div class="center-item-input"><input class="input" type="email" placeholder="congvc@gmail.com"></div>
+                            <div class="center-item-input"><input id="txtEmail" class="input-required " type="email" placeholder="congvc@gmail.com"></div>
                         </div>
 
                         <div class="center-item">
                             <div class="center-item-label ">Tên công ty</div>
-                            <div class="center-item-input"><input class="input" type="text"></div>
+                            <div class="center-item-input"><input id="txtCompanyName" class="input-required" type="text"></div>
                         </div>
                     </div>
                     <div class="body-center-item2">
                         <div class="center-item">
                             <div class="center-item-label ">Số điện thoại(<span style="color:red">*</span>)</div>
-                            <div class="center-item-input"><input class="input" type="number"></div>
+                            <div class="center-item-input"><input id="txtPhoneNumber" class="input-required" type="tel"></div>
                         </div>
 
                         <div class="center-item">
                             <div class="center-item-label ">Mã số thuế</div>
-                            <div class="center-item-input"><input class="input" type="text" placeholder="Mã số thuế của công ty"></div>
+                            <div class="center-item-input"><input id="txtCompanyTaxCode" class="input-required" type="text" placeholder="Mã số thuế của công ty"></div>
                         </div>
                     </div>
                 </div>
                 <div class="dialog-body-bottom">
                     <div class="bottom-item">
-                        <div class="bottom-item-label ">Mã số thuế</div>
-                        <div class="bottom-item-input"><input class="input" type="text"></div>
+                        <div class="bottom-item-label ">Địa chỉ</div>
+                        <div class="bottom-item-input"><input id="txtAddress" class="input-required" type="text"></div>
 
                     </div>
                 </div>
