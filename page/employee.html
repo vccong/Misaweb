@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" href="/css/common/header.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/main.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/navbar.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/content.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/icon.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/button.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/toolbar.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/input.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/grid.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/dialog.css?v=1.1">
+    <link rel="stylesheet" href="/css/page/employee.css?v=1.1">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo-site">
+            <div class="logo-box">
+                <div class="toggle-icon"></div>
+                <div class="amis-logo"></div>
+            </div>
+        </div>
+        <div class="navbar-content">
+            <div class="nav-item ">
+                <div class="nav-item-icon nav-item-1"></div>
+                <a class="nav-item-text">Tổng quan</a>
+            </div>
+            <div class="nav-item">
+                <div class="nav-item-icon nav-item-2"></div>
+                <a class="nav-item-text">Báo cáo</a>
+            </div>
+            <div class="nav-item">
+                <div class="nav-item-icon nav-item-3"></div>
+                <a class="nav-item-text">Mua hàng</a>
+            </div>
+            <div class="nav-item nav-item-customer">
+                <div class="nav-item-icon nav-item-4 "></div>
+                <a class="nav-item-text">Danh mục khách hàng</a>
+            </div>
+            <div class="nav-item">
+                <div class="nav-item-icon nav-item-5"></div>
+                <a class="nav-item-text">Thiết lập hệ thống</a>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="header-left">
+            <select name="" id="" class="select">
+                <option value="" class="select-item">Nhà hàng Biển Đông</option>
+                <option value="" class="select-item">Nhà hàng Biển Tây</option>
+                <option value="" class="select-item">Nhà hàng Biển Bắc</option>
+            </select>
+        </div>
+        <div class="header-right">
+            <img class="img-admin" src="/content/icon/avatar-default.png" alt="">
+            <p>Vuong Chi Cong</p>
+            <img class="img-option" src="/content/icon/option.png" alt="">
+        </div>
+    </div>
+    <div class="content">
+        <div class="header-content">
+            <div class="title">
+                Danh mụcnhân viên
+            </div>
+            <div class="content-feature">
+                <button class="btn-default">
+                    <div class="icon-add">
+                        
+                    </div>
+                    <div class="btn-text">
+                        Thêm nhân viên
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="filter-bar">
+            <div class="filter-left">
+                <input class="icon-search input-search" type="text" placeholder="Tim kiếm theo mã, tên">
+            </div>
+            <div class="filter-right">
+                <button class="m-btn-refresh m-second-button">
+                    
+                </button>
+            </div>
+        </div>
+        <div class="grid grid-employee">
+            <table border="0" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th fieldName="EmployeeCode">Mã NV</th>
+                        <th fieldName="FullName">Tên NV</th>
+                        <th fieldName="GenderName" formatType="sex">Giới tính</th>
+                        <th fieldName="Address">Địa chỉ</th>
+                        <th fieldName="DateOfBirth" formatType="ddmmyyyy">Ngày sinh</th>
+                        <th fieldName="Email">Email</th>
+                        <th fieldName="PositionName">Chức vụ</th>
+                        <th fieldName="DepartmentName">Phòng ban</th>
+                        <th fieldName="Salary" formatType="MoneyVND">Mức lương hiện tại</th>
+                        <th fieldName="WorkStatusName">Tình trạng công việc</th>
+                        <th fieldName="PhoneNumber">SĐT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="paging-bar">
+            <div class="bar-left">
+                <p>Hiển thị 1-10/1000 Nhân viên</p>
+            </div>
+            <div class="bar-center">
+                <p>
+                    <span><<</span>
+                    <span><</span>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <span>></span>
+                    <span>>></span>
+                </p>
+            </div>
+            <div class="bar-right">
+                <p>10 Nhân viên/trang</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-dialog dialog-detail">
+        <div class="dialog-model">
+
+        </div>
+        <div class="dialog-content">
+
+        </div>
+    </div>
+
+    <script src="/lib/jquery-3.6.0.min.js"></script>
+    <script src="/js/common/common.js"></script>
+    <script src="/js/common/base.js"></script>
+    <script src="/js/page/employee.js"></script>
+
+</body>
+
+</html>

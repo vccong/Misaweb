@@ -1,0 +1,85 @@
+.btn-default {
+    background-color: #019160;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 13px;
+    color: #ffffff;
+    font-family: GoogleSans-Regular;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-default:hover {
+    background-color: #2fbe8e;
+}
+
+.btn-default .btn-text {
+    margin-left: 8px;
+}
+
+.m-second-button {
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+    color: #000000;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+}
+
+.m-second-button:hover {
+    background-color: #e9ebee;
+}
+
+.m-btn-refresh {
+    background-image: url(/content/icon/refresh.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 35px;
+}
+
+.btn-save {
+    background-color: #019160;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 13px;
+    color: #ffffff;
+    font-family: GoogleSans-Regular;
+    padding-left: 16px;
+    padding-right: 16px;
+    align-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 40px;
+    text-align: center;
+}
+
+.btn-save:hover {
+    background-color: #2FBE8E;
+}
+
+.btn-close {
+    border-radius: 4px;
+    height: 40px;
+    font-size: 13px;
+    background-color: #e5e5e5;
+    align-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 16px;
+}
+
+.btn-close:hover {
+    background-color: #E9EBEE;
+}

@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" href="/css/common/header.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/main.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/navbar.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/content.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/icon.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/button.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/toolbar.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/input.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/grid.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/dialog.css?v=1.1">
+    <link rel="stylesheet" href="/css/common/common.css">
+    <link rel="stylesheet" href="/css/page/employee.css?v=1.1">
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo-site">
+            <div class="logo-box">
+                <div class="toggle-icon"></div>
+                <div class="amis-logo"></div>
+            </div>
+        </div>
+        <div class="navbar-content">
+            <div class="nav-item nav-item-employee">
+                <div class="nav-item-icon nav-item-1"></div>
+                <div class="nav-item-text">Tổng quan</div>
+            </div>
+            <div class="nav-item">
+                <div class="nav-item-icon nav-item-2"></div>
+                <a class="nav-item-text">Báo cáo</a>
+            </div>
+            <div class="nav-item">
+                <div class="nav-item-icon nav-item-3"></div>
+                <a class="nav-item-text">Mua hàng</a>
+            </div>
+            <div class="nav-item">
+                <div class="nav-item-icon nav-item-4"></div>
+                <a class="nav-item-text">Danh mục khách hàng</a>
+            </div>
+            <div class="nav-item">
+                <div class="nav-item-icon nav-item-5"></div>
+                <a class="nav-item-text">Thiết lập hệ thống</a>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="header-left">
+            <select name="" id="" class="select">
+                <option value="" class="select-item">Nhà hàng Biển Đông</option>
+                <option value="" class="select-item">Nhà hàng Biển Tây</option>
+                <option value="" class="select-item">Nhà hàng Biển Bắc</option>
+            </select>
+        </div>
+        <div class="header-right">
+            <img class="img-admin" src="/content/icon/avatar-default.png" alt="">
+            <p>Vuong Chi Cong</p>
+            <img class="img-option" src="/content/icon/option.png" alt="">
+        </div>
+    </div>
+    <div class="content">
+        <div class="header-content">
+            <div class="title">
+                Danh mục khách hàng
+            </div>
+            <div class="content-feature">
+                <button class="btn-default">
+                    <div class="icon-add">
+                        
+                    </div>
+                    <div class="btn-text" id="btn-add">
+                        Thêm khách hàng
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="filter-bar">
+            <div class="filter-left">
+                <input class="icon-search input-search" type="text" placeholder="Tim kiếm theo mã, tên">
+            </div>
+            <div class="filter-right">
+                <button class="m-btn-refresh m-second-button">
+                    
+                </button>
+            </div>
+        </div>
+        <div class="grid grid-employee">
+            <table border="0" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th fieldName="CustomerCode">Mã KH</th>
+                        <th fieldName="FullName">Tên KH</th>
+                        <th fieldName="GenderName" formatType="sex">Giới tính</th>
+                        <th fieldName="Address">Địa chỉ</th>
+                        <th fieldName="DateOfBirth" formatType="ddmmyyyy">Ngày sinh</th>
+                        <th fieldName="Email">Email</th>
+                        <th fieldName="PhoneNumber">SĐT</th>
+                        <th fieldName="CustomerGroupName">Xếp loại</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="paging-bar">
+            <div class="bar-left">
+                <p>Hiển thị 1-10/1000 Khách hàng</p>
+            </div>
+            <div class="bar-center">
+                <p>
+                    <span><<</span>
+                    <span><</span>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <span>></span>
+                    <span>>></span>
+                </p>
+            </div>
+            <div class="bar-right">
+                <p>10 Khách hàng/trang</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-dialog dialog-detail">
+        <div class="dialog-model">
+
+        </div>
+        <div class="dialog-content">
+            <div class="dialog-header">
+                <div class="dialog-header-title">
+                    Thông tin nhân viên
+                </div>
+                <div class="dialog-header-close">
+                    <button class="btn-exit"></button>
+                </div>
+            </div>
+            <div class="dialog-body">
+                <div class="dialog-body-top">
+                    <div class="body-top-item1">
+                        <div class="top-img"></div>
+                        <div class="top-img-title">Vui lòng chọn ảnh có định dạng
+                            <br> <span>.jpg,.jpeg,.png,.gif</span>
+                        </div>
+                    </div>
+                    <div class="body-top-item2">
+                        <div class="top-item ">
+                            <div class="top-item-label ">Mã khách hàng(<span style="color:red">*</span>)</div>
+                            <div class="top-item-input"><input class="input" type="text"></div>
+                        </div>
+                        <div class="top-item ">
+                            <div class="top-item-label ">Mã thẻ thành viên</div>
+                            <div class="top-item-input"><input class="input" type="text"></div>
+                        </div>
+                        <div class="top-item ">
+                            <div class="top-item-label ">Ngày sinh</div>
+                            <div class="top-item-input"><input class="input" type="date"></div>
+                        </div>
+                    </div>
+                    <div class="body-top-item3 ">
+                        <div class="top-item ">
+                            <div class="top-item-label">Họ và tên(<span style="color:red">*</span>)</div>
+                            <div class="top-item-input"><input class="input" type="text"></div>
+                        </div>
+                        <div class="top-item ">
+                            <div class="top-item-label ">Nhóm khách hàng</div>
+                            <div class="top-item-input">
+                                <select name="" id="" class="input">
+                                <option value="Khách vip">Khách vip</option>
+                                <option value="Khách thường">Khách thường</option>
+                                <option value="Khách của công ty">Khách của công ty</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="top-item ">
+                            <div class="top-item-label ">Giới tính</div>
+                            <div class="top-item-radio">
+                                <div><input name="gioitinh" type="radio">Nam</div>
+                                <div><input name="gioitinh" type="radio">Nữ</div>
+                                <div><input name="gioitinh" type="radio">Khác</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-body-center">
+                    <div class="body-center-item1">
+                        <div class="center-item">
+                            <div class="center-item-label ">Email</div>
+                            <div class="center-item-input"><input class="input" type="email" placeholder="congvc@gmail.com"></div>
+                        </div>
+
+                        <div class="center-item">
+                            <div class="center-item-label ">Tên công ty</div>
+                            <div class="center-item-input"><input class="input" type="text"></div>
+                        </div>
+                    </div>
+                    <div class="body-center-item2">
+                        <div class="center-item">
+                            <div class="center-item-label ">Số điện thoại(<span style="color:red">*</span>)</div>
+                            <div class="center-item-input"><input class="input" type="number"></div>
+                        </div>
+
+                        <div class="center-item">
+                            <div class="center-item-label ">Mã số thuế</div>
+                            <div class="center-item-input"><input class="input" type="text" placeholder="Mã số thuế của công ty"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-body-bottom">
+                    <div class="bottom-item">
+                        <div class="bottom-item-label ">Mã số thuế</div>
+                        <div class="bottom-item-input"><input class="input" type="text"></div>
+
+                    </div>
+                </div>
+                <div class="dialog-footer">
+                    <button class="btn-close">Hủy</button>
+                    <button class="btn-save"> <i class="fa fa-save fa-1x"></i>Lưu</button>
+
+                </div>
+            </div>
+            <script src="/lib/jquery-3.6.0.min.js "></script>
+            <script src="/js/common/common.js "></script>
+            <script src="/js/common/base.js "></script>
+            <script src="/js/page/customer.js "></script>
+</body>
+
+</html>
+
+</html>

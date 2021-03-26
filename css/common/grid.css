@@ -1,0 +1,44 @@
+table th,
+td {
+    border-bottom: 1px solid #bbbbbb;
+    padding: 10px 16px;
+    text-align: left;
+    font-size: 13px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+table {
+    padding: 10px 16px;
+}
+
+table thead th {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    position: -webkit-sticky;
+}
+
+tr:hover {
+    background-color: #e5e5e5;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* td {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */

@@ -1,0 +1,224 @@
+.m-dialog {
+    font-family: 'GoogleSans-Regular';
+    display: none;
+}
+
+.m-dialog .dialog-model {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    /* Do trong suot
+            */
+    opacity: .4;
+    z-index: 999;
+}
+
+.m-dialog .dialog-content {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    background-color: #ffffff;
+    z-index: 1000;
+    top: calc(50% - 300px);
+    left: calc(50% - 400px);
+    padding: 24px;
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+
+.m-dialog .dialog-content .dialog-header {
+    display: flex;
+}
+
+.m-dialog .dialog-content .dialog-header .dialog-header-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.m-dialog .dialog-content .dialog-header .dialog-header-close button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-image: url("/content/icon/x.svg");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+    border-radius: 0 5px 5px 0;
+}
+
+.m-dialog .dialog-content .dialog-header .dialog-header-close button:hover {
+    background-color: #ccc;
+}
+
+
+/* Tieu de */
+
+.m-dialog .dialog-content .dialog-header .dialog-header-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+
+/* body */
+
+.dialog-body .dialog-body-top {
+    display: flex;
+}
+
+.dialog-body .dialog-body-top .top-img {
+    background-image: url("/content/img/default-avatar.jpg");
+    width: 170px;
+    height: 170px;
+    background-size: contain;
+    border: 1px solid #d2d2d2;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+.dialog-body .dialog-body-top .top-img-title {
+    text-align: center;
+}
+
+.dialog-body .dialog-body-top .top-img-title span {
+    font-family: 'GoogleSans-Bold';
+}
+
+.dialog-body-top .body-top-item1 {
+    width: 200px;
+    height: 200px;
+    padding: 16px;
+}
+
+.dialog-body-top .body-top-item2 {
+    width: 300px;
+    padding: 16px;
+}
+
+.dialog-body-top .body-top-item3 {
+    padding: 16px;
+    width: 300px;
+}
+
+.dialog-body-top .top-item {
+    margin-bottom: 16px;
+}
+
+.dialog-body-top .top-item .top-item-label {
+    margin-bottom: 4px;
+}
+
+.dialog-body-top .top-item .top-item-input input {
+    height: 40px;
+    padding: 0%;
+    padding-left: 15px;
+    border: 1px solid #DBDEFF;
+    border-radius: 5px;
+}
+
+.dialog-body-top .top-item .top-item-input select {
+    height: 42px;
+    width: 262px;
+    border: 1px solid #DBDEFF;
+    border-radius: 5px;
+    outline: none;
+}
+
+.dialog-body-top .top-item .top-item-radio {
+    justify-content: space-between;
+    display: flex;
+    position: relative;
+    top: 12px;
+}
+
+.dialog-body-top .top-item .top-item-radio input {
+    transform: none;
+    -webkit-transform: scale(1.5);
+    width: 20px;
+}
+
+.dialog-body-top .top-item .top-item-radio input:checked::after {
+    background: yellowgreen !important;
+    visibility: visible;
+    display: inline-block;
+}
+
+.input {
+    width: calc(100% - 16px);
+}
+
+.dialog-body-center .center-item {
+    margin-bottom: 16px;
+}
+
+.dialog-body-center {
+    display: flex;
+}
+
+.dialog-body-center .center-item .center-item-label {
+    margin-bottom: 4px;
+}
+
+.dialog-body-center .body-center-item1 {
+    width: 472px;
+    padding: 16px;
+}
+
+.dialog-body-center .body-center-item1 .center-item {
+    width: calc(100% -32px);
+}
+
+.dialog-body-center .body-center-item2 {
+    padding: 16px;
+    width: 264px;
+}
+
+.dialog-body-center .center-item .center-item-input input {
+    height: 40px;
+    padding: 0%;
+    padding-left: 15px;
+    border: 1px solid #DBDEFF;
+    border-radius: 5px;
+}
+
+.dialog-body .dialog-body-bottom {
+    padding: 0 16px 16px 16px;
+}
+
+.dialog-body-bottom .bottom-item .bottom-item-label {
+    margin-bottom: 4px;
+}
+
+.dialog-body-bottom .bottom-item .bottom-item-input input {
+    height: 40px;
+    padding: 0%;
+    padding-left: 15px;
+    border: 1px solid #DBDEFF;
+    border-radius: 5px;
+}
+
+
+/* footer */
+
+.dialog-footer {
+    text-align: right;
+    background-color: #e5e5e5;
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    margin-left: -24px;
+    border-radius: 0 0 5px 5px;
+}
+
+.dialog-footer button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+}
