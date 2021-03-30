@@ -14,13 +14,15 @@ class employeejs extends basejs {
         super();
     }
 
-    setDataUrl() {
-            this.getDataUrl = "http://api.manhnv.net/api/employees";
-        }
-        /**
-         * Thêm dữ liệu
-         * CreateBy: VCCONG(19/3/2021)
-         */
+    setApiRouter() {
+        this.apiRouter = "api/employees";
+    }
+
+
+    /**
+     * Thêm dữ liệu
+     * CreateBy: VCCONG(19/3/2021)
+     */
     add() {
 
         }

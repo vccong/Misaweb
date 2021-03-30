@@ -78,6 +78,7 @@
 
 .paging-bar .bar-center button:focus {
     background: #019160;
+    outline: none;
 }
 
 .paging-bar .bar-right {

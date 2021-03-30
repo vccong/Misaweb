@@ -136,8 +136,6 @@
 }
 
 .dialog-body-top .top-item .top-item-radio {
-    justify-content: space-between;
-    display: flex;
     position: relative;
     top: 12px;
 }

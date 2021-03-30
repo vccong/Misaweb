@@ -157,84 +157,94 @@
                     <div class="body-top-item2">
                         <div class="top-item ">
                             <div class="top-item-label ">Mã khách hàng(<span style="color:red">*</span>)</div>
-                            <div class="top-item-input"><input id="txtCustomerCode" class="input-required" type="text"></div>
+                            <div class="top-item-input"><input fieldName="CustomerCode" id="txtCustomerCode" class="input-required" type="text"></div>
                         </div>
                         <div class="top-item ">
                             <div class="top-item-label ">Mã thẻ thành viên</div>
-                            <div class="top-item-input"><input id="txtMemberCardCode" class="input-required" type="text">
+                            <div class="top-item-input"><input fieldName="MemberCardCode" id="txtMemberCardCode" class="input-required" type="text">
                             </div>
                         </div>
                         <div class="top-item ">
                             <div class="top-item-label ">Ngày sinh</div>
-                            <div class="top-item-input"><input id="dtDateOfBirth" class="input-required" type="date"></div>
+                            <div class="top-item-input">
+                                <input fieldName="DateOfBirth" id="dtDateOfBirth" class="input-required" type="date"></div>
                         </div>
                     </div>
-                    <div class="body-top-item3 ">
-                        <div class="top-item ">
-                            <div class="top-item-label">Họ và tên(<span style="color:red">*</span>)</div>
-                            <div class="top-item-input"><input id="txtFullName" class="input-required" type="text"></div>
+                    <div class="body-top-item3">
+                        <div class="top-item">
+                            <div class="top-item-label">Họ và tên(<span style="color:red ">*</span>)</div>
+                            <div class="top-item-input"><input fieldName="FullName" id="txtFullName" class="input-required" type="text"></div>
                         </div>
                         <div class="top-item ">
-                            <div class="top-item-label ">Nhóm khách hàng</div>
+                            <div class="top-item-label">Nhóm khách hàng</div>
                             <div class="top-item-input">
-                                <select name="" id="cbxCustomerGroupName" class="input">
-                                <option value="Khách vip">Khách vip</option>
-                                <option value="Khách thường">Khách thường</option>
-                                <option value="Khách của công ty">Khách của công ty</option>
+                                <select fieldName="CustomerGroupId" name=" " id="cbxCustomerGroupName" class="input">
+                                
                                 </select>
                             </div>
                         </div>
                         <div class="top-item ">
                             <div class="top-item-label ">Giới tính</div>
-                            <div class="top-item-radio" id="gender">
-                                <label><input name="gioitinh" type="radio" value="Nam">Nam</label>
-                                <label><input name="gioitinh" type="radio" value="Nữ">Nữ</label>
-                                <label><input name="gioitinh" type="radio" value="Không xác định">Khác</label>
+                            <div class="top-item-radio " id="gender">
+
+                                <input id="nam" fieldName="Gender" name="gioitinh" type="radio" value="1">
+                                <label for="nam">Nam</label>
+                                <input id="nu" fieldName="Gender" name="gioitinh" type="radio" value="0" style="margin-left: 10px; ">
+                                <label for="nu ">Nữ</label>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="dialog-body-center">
-                    <div class="body-center-item1">
-                        <div class="center-item">
+                <div class="dialog-body-center ">
+                    <div class="body-center-item1 ">
+                        <div class="center-item ">
                             <div class="center-item-label ">Email</div>
-                            <div class="center-item-input"><input id="txtEmail" class="input-required " type="email" placeholder="congvc@gmail.com"></div>
+                            <div class="center-item-input "><input fieldName="email " id="txtEmail " class="input-required " type="email " placeholder="congvc@gmail.com "></div>
                         </div>
 
-                        <div class="center-item">
+                        <div class="center-item ">
                             <div class="center-item-label ">Tên công ty</div>
-                            <div class="center-item-input"><input id="txtCompanyName" class="input-required" type="text"></div>
+                            <div class="center-item-input ">
+                                <input fieldName="CompanyName " id="txtCompanyName " class="input-required " type="text "></div>
                         </div>
                     </div>
-                    <div class="body-center-item2">
-                        <div class="center-item">
-                            <div class="center-item-label ">Số điện thoại(<span style="color:red">*</span>)</div>
-                            <div class="center-item-input"><input id="txtPhoneNumber" class="input-required" type="tel"></div>
+                    <div class="body-center-item2 ">
+                        <div class="center-item ">
+                            <div class="center-item-label ">Số điện thoại(<span style="color:red ">*</span>)</div>
+                            <div class="center-item-input ">
+                                <input fieldName="PhoneNumber " id="txtPhoneNumber " class="input-required " type="tel "></div>
                         </div>
 
-                        <div class="center-item">
+                        <div class="center-item ">
                             <div class="center-item-label ">Mã số thuế</div>
-                            <div class="center-item-input"><input id="txtCompanyTaxCode" class="input-required" type="text" placeholder="Mã số thuế của công ty"></div>
+                            <div class="center-item-input ">
+                                <input fieldName="CompanyTaxCode " id="txtCompanyTaxCode " class="input-required " type="text " placeholder="Mã số thuế của công ty "></div>
                         </div>
                     </div>
                 </div>
-                <div class="dialog-body-bottom">
-                    <div class="bottom-item">
+                <div class="dialog-body-bottom ">
+                    <div class="bottom-item ">
                         <div class="bottom-item-label ">Địa chỉ</div>
-                        <div class="bottom-item-input"><input id="txtAddress" class="input-required" type="text"></div>
+                        <div class="bottom-item-input "><input fieldName="Address " id="txtAddress " class="input-required " type="text "></div>
 
                     </div>
                 </div>
-                <div class="dialog-footer">
-                    <button class="btn-close">Hủy</button>
-                    <button class="btn-save"> <i class="fa fa-save fa-1x"></i>Lưu</button>
+                <div class="dialog-footer ">
+                    <button class="btn-close ">Hủy</button>
+                    <button class="btn-save "> <i class="fa fa-save fa-1x "></i>Lưu</button>
 
                 </div>
             </div>
-            <script src="/lib/jquery-3.6.0.min.js "></script>
-            <script src="/js/common/common.js "></script>
-            <script src="/js/common/base.js "></script>
-            <script src="/js/page/customer.js "></script>
+        </div>
+    </div>
+    <div class="loading ">
+        <div class="loading-modal "></div>
+        <div class="loading-icon "></div>
+    </div>
+    <script src="/lib/jquery-3.6.0.min.js "></script>
+    <script src="/js/common/common.js "></script>
+    <script src="/js/common/base.js "></script>
+    <script src="/js/page/customer.js "></script>
 </body>
 
 </html>

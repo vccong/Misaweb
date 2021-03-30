@@ -14,15 +14,18 @@ $(document).ready(function() {
 class customerjs extends basejs {
     constructor() {
         super();
+
     }
 
-    setDataUrl() {
-            this.getDataUrl = "http://api.manhnv.net/api/customers";
-        }
-        /**
-         * Thêm dữ liệu
-         * CreateBy: VCCONG(19/3/2021)
-         */
+    setApiRouter() {
+        this.apiRouter = "api/customers";
+    }
+
+
+    /**
+     * Thêm dữ liệu
+     * CreateBy: VCCONG(19/3/2021)
+     */
     add() {
 
         }
