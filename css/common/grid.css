@@ -23,6 +23,10 @@ tr:hover {
     background-color: #e5e5e5;
 }
 
+.row-select {
+    background-color: rgb(14, 226, 156) !important;
+}
+
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
